@@ -1,0 +1,87 @@
+/**
+ * 관리자 스타일
+ 
+ * @version		1.0.0
+ * @package	WooShipping
+ * @category	Delivery
+ * @author 	gaegoms (gaegoms@gmail.com)
+ */
+
+.type-shop_order mark.on-delivery:after {
+	font-family: WooCommerce;
+	speak: none;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	text-indent: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #73a724;
+	content: "\e019";
+}
+
+.wooshipping-delivery-tracking-trigger { cursor: pointer; }
+
+/* 주문 : 배송상태 */
+td.column-wooshipping_delivery .prepare { color: mediumvioletred; }
+td.column-wooshipping_delivery .progress { color: dodgerblue; }
+td.column-wooshipping_delivery .complate { color: forestgreen; }
+
+
+/* 주문상세 : 메타박스 */
+#wooshipping-delivery-data .item a { text-decoration: none; }
+#wooshipping-delivery-data .item .button { width: 100%; }
+#wooshipping-delivery-data .unshipped-items .item:first-child { border-top: 1px dotted #ccc; }
+#wooshipping-delivery-data .unshipped-items .item { line-height: 30px; border-bottom: 1px dotted #ccc;}
+
+#wooshipping-delivery-data .delivery-tool label { display:none; }
+#wooshipping-delivery-data .delivery-tool input { width: 67%; }
+#wooshipping-delivery-data .delivery-tool .button { width: 30%; text-align:center; }
+
+#wooshipping-delivery-data .shipped-items .item { margin-top: 5px; }
+#wooshipping-delivery-data .shipped-items .item .package-button { position: relative; }
+#wooshipping-delivery-data .shipped-items .item .package-button .title { width: 92%; overflow: hidden; display: inline-block; }
+#wooshipping-delivery-data .shipped-items .item .toggle-icon { position:absolute; top: 3px; right: 5px; }
+#wooshipping-delivery-data .shipped-items .package {
+	margin: 0;
+	padding: 5px 10px;
+	background: #efefef;
+	border: 1px solid #dfdfdf;
+	border-top: 0px;
+}
+#wooshipping-delivery-data .shipped-items .package label { width: 25%; display: inline-block; }
+#wooshipping-delivery-data .shipped-items .package input[type=text] { width: 70%; }
+#wooshipping-delivery-data .shipped-items .package .button { width: auto; }
+
+#woocommerce-order-items .delivery-info label { width: 25%; }
+#woocommerce-order-items .delivery-info ul,
+#woocommerce-order-items .delivery-info ul li { display: inline-block; margin: 0; vertical-align: middle; }
+#woocommerce-order-items .delivery-info ul li:after { content: ' | ';}
+#woocommerce-order-items .delivery-info ul li:last-child:after { content: ' '; }
+
+
+/* 설정 : 벌크 관리자 */
+#wooshipping-delivery-bulk-manager { width: 98%; }
+#wooshipping-delivery-bulk-manager table.wooshipping-delivery .column-order_id { width: 8%; }
+#wooshipping-delivery-bulk-manager table.wooshipping-delivery .column-company { width: 15%; }
+#wooshipping-delivery-bulk-manager table.wooshipping-delivery .column-tracking_no { width: 20%; }
+#wooshipping-delivery-bulk-manager table.wooshipping-delivery .column-tracking_no input[type="text"] { width: 60%; }
+#wooshipping-delivery-bulk-manager table.wooshipping-delivery .column-shipping_date { width: 10%; }
+#wooshipping-delivery-bulk-manager table.wooshipping-delivery .column-tracking { width: 10%; }
+
+
+/* 설정 : 배송사 설정 */
+#wooshipping-delivery-company table th { text-align: center; padding: 8px 10px; }
+#wooshipping-delivery-company table tbody tr td { text-align: center; padding: 4px; 0; }
+#wooshipping-delivery-company table .column-cb { width: 5%; min-width: 45px; }
+#wooshipping-delivery-company table .column-label { width: 10%; min-width: 100px; }
+#wooshipping-delivery-company table .column-priority { width: 6%; min-width: 56px; }
+#wooshipping-delivery-company table .column-priority select { width: 100%; text-align:center; }
+@media only screen and (max-width: 767px) { #wooshipping-delivery-company table .column-url { display: none; } }
